@@ -1,14 +1,11 @@
 import React from 'react'
-import Navbar from './Navbar'
 import { getHero, urlFor } from '@/libs/sanity'
 import Image from 'next/image';
 
 const Hero = async () => {
   const heroData = await getHero();
-  console.log(heroData.heroImage);
   return (
     <div id='home' className='w-full min-h-[100vh] flex flex-col'>
-       <Navbar />
        <div className='w-full flex flex-col lg:flex-row flex-grow bg-gray-100'>
         <div className='w-full lg:w-1/2 flex flex-col h-full  mt-16 lg:mt-52'>
         <div className='w-3/4 mx-auto flex flex-col gap-8 text-heading-100'>

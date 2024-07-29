@@ -3,7 +3,7 @@ import imageUrlBuilder from "@sanity/image-url";
 
 export const client = createClient({
   projectId: "gu7f29a1",
-  apiVersion: "2024-07-29",
+  apiVersion: "2024-07-30",
   dataset: "production",
   useCdn: false,
 });
@@ -44,7 +44,7 @@ export async function getProjects() {
   return projects;
 }
 
-export async function getRTestimonials() {
+export async function getTestimonials() {
   const query = `*[_type == "testimonials"]{
     ...,
     "reviews": reviews[]-> {
@@ -58,3 +58,24 @@ export async function getRTestimonials() {
   const testimonials = await client.fetch(query);
   return testimonials;
 }
+
+export async function getConatct() {
+  const query = `*[_type == "contact"][0]`;
+  const contact = await client.fetch(query);
+  return contact;
+}
+
+
+export async function getFooter() {
+  const query = `*[_type == "footer"][0]`;
+  const footer = await client.fetch(query);
+  return footer;
+}
+
+
+export async function getMetadata() {
+  const query = `*[_type == "metadata"][0]`;
+  const metadat = await client.fetch(query);
+  return metadat;
+}
+

@@ -6,7 +6,6 @@ import { LuArrowUpRight } from "react-icons/lu";
 
 const Projects = async () => {
   const projects = await getProjects();
-  console.log(projects);
   return (
     <div className="p-24" id="projects">
       <div className="flex justify-between items-center">
