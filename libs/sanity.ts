@@ -45,7 +45,16 @@ export async function getProjects() {
 }
 
 export async function getRTestimonials() {
-  const query = `*[_type == "testimonials"][0]`;
+  const query = `*[_type == "testimonials"]{
+    ...,
+    "reviews": reviews[]-> {
+      stars,
+      reviewText,
+      clientName,
+      clientCompany,
+      clientImage
+    }
+  }[0]`;
   const testimonials = await client.fetch(query);
   return testimonials;
 }
