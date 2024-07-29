@@ -12,6 +12,7 @@
     "@emotion/react": "^11.13.0",
     "@emotion/styled": "^11.13.0",
     "@mui/material": "^5.16.5",
+    "@sanity/vision": "^3.52.2",
     "next": "14.2.5",
     "next-sanity": "^9.4.2",
     "react": "^18",
