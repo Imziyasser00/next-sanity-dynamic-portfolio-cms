@@ -21,6 +21,9 @@ const config: Config = {
         body : {
           100 :"#1C1E53",
         },
+        pink : {
+          100 : "#E62872",
+        },
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

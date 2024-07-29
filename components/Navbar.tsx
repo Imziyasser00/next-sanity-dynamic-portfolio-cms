@@ -7,11 +7,11 @@ import React from 'react'
 export default async function Navbar(){
     const logo = await getLogo();
   return (
-    <div className='w-full flex justify-between p-4 px-6 items-center shadow-lg z-20'>
+    <div className='w-full hidden md:flex justify-between p-4 px-6 items-center shadow-lg z-20'>
         <Image src={urlFor(logo.logo).url()} alt={logo.logoName} width={200} height={400} className='p-2' />
         <div className='flex gap-10 text-xl'>
             <a href='#home' className='text-purple-100 font-bold'>Home</a>
-            <a href='#portfolio'>Portfolio</a>
+            <a href='#projects'>Portfolio</a>
             <a href='#about'>About me</a>
             <a href='#testimonials'>Testimonials</a>
         </div>
