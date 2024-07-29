@@ -3,7 +3,7 @@ import imageUrlBuilder from "@sanity/image-url";
 
 export const client = createClient({
   projectId: "gu7f29a1",
-  apiVersion: "2024-08-03",
+  apiVersion: "2024-07-29",
   dataset: "production",
   useCdn: false,
 });
@@ -42,4 +42,10 @@ export async function getProjects() {
   const query = `*[_type == "projects"][0]`;
   const projects = await client.fetch(query);
   return projects;
+}
+
+export async function getRTestimonials() {
+  const query = `*[_type == "testimonials"][0]`;
+  const testimonials = await client.fetch(query);
+  return testimonials;
 }

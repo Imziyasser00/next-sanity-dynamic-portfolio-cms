@@ -4,7 +4,6 @@ import React from "react";
 
 const About = async () => {
   const about = await getAbout();
-  console.log(about);
   return (
     <div id="about" className="w-full flex flex-col lg:flex-row p-24">
       <div className="w-full lg:w-1/2 flex justify-center items-center mx-auto">
